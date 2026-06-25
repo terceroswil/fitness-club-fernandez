@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FITNESS CLUB FERNANDEZ — Fitness, Danza & Zumba</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Estilos del proyecto -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============================================================
+     MOBILE OVERLAY & SIDEBAR
+============================================================ -->
+<div class="mob-overlay" id="mobOverlay" onclick="closeSidebar()"></div>
+
+<aside class="mob-sidebar" id="mobSidebar">
+  <button class="mob-close" onclick="closeSidebar()">
+    <i class="fas fa-times"></i>
+  </button>
+  <ul>
+    <li><a href="#inicio"      onclick="closeSidebar()">Inicio</a></li>
+    <li><a href="#servicios"   onclick="closeSidebar()">Servicios</a></li>
+    <li><a href="#galeria"     onclick="closeSidebar()">Galeria</a></li>
+    <li><a href="#equipo"      onclick="closeSidebar()">Equipo</a></li>
+    <li><a href="#testimonios" onclick="closeSidebar()">Opiniones</a></li>
+    <li><a href="#contacto"    onclick="closeSidebar()">Inscribete</a></li>
+  </ul>
+</aside>
+
+<!-- ============================================================
+     NAVBAR
+============================================================ -->
+<nav class="navbar" id="navbar">
+  <a href="#inicio" class="logo">
+    <div class="logo-icon"><i class="fas fa-dumbbell"></i></div>
+    <span class="logo-text">FITNESS <span>CLUB</span> FERNANDEZ</span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#galeria">Galeria</a></li>
+    <li><a href="#equipo">Equipo</a></li>
+    <li><a href="#testimonios">Opiniones</a></li>
+    <li><a href="#contacto" class="nav-cta">Inscribete</a></li>
+  </ul>
+
+  <button class="hamburger" id="hamburger" onclick="openSidebar()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-orb"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <i class="fas fa-fire"></i>
+      Tu mejor version empieza aqui
+    </div>
+
+    <h1 class="hero-title">
+      Transforma tu<br>
+      cuerpo, <span class="hi">libera</span><br>
+      tu <span class="he">energia</span>
+    </h1>
+
+    <p class="hero-sub">
+      Fitness, danza y zumba en un solo lugar. Clases para todos los niveles, instructores certificados y una comunidad que te impulsa cada dia.
+    </p>
+
+    <div class="hero-btns">
+      <a href="#contacto" class="btn-primary">
+        <i class="fas fa-bolt"></i>
+        Inscribirme Ahora
+      </a>
+      <a href="#servicios" class="btn-ghost">
+        <i class="fas fa-play-circle"></i>
+        Ver Servicios
+      </a>
+    </div>
+
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">500<span style="color:var(--earth-warm)">+</span></div>
+        <div class="stat-lbl">Miembros activos</div>
+      </div>
+      <div>
+        <div class="stat-num">15<span style="color:var(--earth-warm)">+</span></div>
+        <div class="stat-lbl">Clases semanales</div>
+      </div>
+      <div>
+        <div class="stat-num">3</div>
+        <div class="stat-lbl">Instructores expertos</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICIOS
+============================================================ -->
+<section class="services" id="servicios">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Lo que ofrecemos</div>
+      <h2 class="section-title">Nuestros <em>Servicios</em></h2>
+      <p class="section-sub">Programas disenados para cada objetivo, cada nivel y cada estilo de vida.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="services-grid">
+      <div class="svc-card aos">
+        <div class="svc-icon">💪</div>
+        <h3 class="svc-title">Fitness & Gym</h3>
+        <p class="svc-desc">Entrenamiento funcional y de fuerza con equipos modernos. Sesiones personalizadas para alcanzar tu meta en el menor tiempo posible.</p>
+        <span class="svc-pill pill-mint">Para todos</span>
+      </div>
+      <div class="svc-card aos d1">
+        <div class="svc-icon">💃</div>
+        <h3 class="svc-title">Clases de Danza</h3>
+        <p class="svc-desc">Baila al ritmo de la salsa, bachata y reggaeton. Aprende tecnica, ritmo y expresion con instructores profesionales.</p>
+        <span class="svc-pill pill-earth">Todos los niveles</span>
+      </div>
+      <div class="svc-card aos d2">
+        <div class="svc-icon">🎵</div>
+        <h3 class="svc-title">Zumba</h3>
+        <p class="svc-desc">La clase fitness mas divertida del mundo. Quema calorias bailando con coreografias latinas que hacen olvidar que haces ejercicio.</p>
+        <span class="svc-pill pill-mint">Energia total</span>
+      </div>
+      <div class="svc-card aos d3">
+        <div class="svc-icon">🧘</div>
+        <h3 class="svc-title">Club de Bienestar</h3>
+        <p class="svc-desc">Yoga, meditacion y stretching para combinar fitness fisico con equilibrio mental y una vida mas plena.</p>
+        <span class="svc-pill pill-earth">Mente & cuerpo</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CARRUSEL 3D
+============================================================ -->
+<section class="carousel-section" id="galeria">
+  <div class="section-header" style="padding:0 2rem;">
+    <div class="section-tag">Galeria</div>
+    <h2 class="section-title">Nuestro <em>Mundo</em></h2>
+    <p class="section-sub">Momentos reales de nuestra comunidad en accion.</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="scene" id="scene">
+    <div class="ring" id="ring">
+      <!-- Slide 1 — Nuestro equipo -->
+      <div class="cslide active">
+        <img src="assets/images/1.png" alt="Equipo FITNESS CLUB FERNANDEZ">
+        <div class="cslide-cap">
+          <div class="cslide-title">Nuestro Equipo</div>
+          <div class="cslide-sub">Pasion por el fitness y la danza</div>
+        </div>
+      </div>
+      <!-- Slide 2 — Clases grupales -->
+      <div class="cslide">
+        <img src="assets/images/2.png" alt="Clases grupales FITNESS CLUB FERNANDEZ">
+        <div class="cslide-cap">
+          <div class="cslide-title">Clases Grupales</div>
+          <div class="cslide-sub">Juntos somos mas fuertes</div>
+        </div>
+      </div>
+      <!-- Slide 3 — Danza y estilo -->
+      <div class="cslide">
+        <img src="assets/images/3.png" alt="Danza FITNESS CLUB FERNANDEZ">
+        <div class="cslide-cap">
+          <div class="cslide-title">Danza & Estilo</div>
+          <div class="cslide-sub">Ritmo, energia y actitud</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="car-ctrl">
+    <button class="car-btn" onclick="carRotate(-1)" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+    <div class="car-dots" id="carDots">
+      <div class="car-dot active" onclick="carGoTo(0)"></div>
+      <div class="car-dot" onclick="carGoTo(1)"></div>
+      <div class="car-dot" onclick="carGoTo(2)"></div>
+    </div>
+    <button class="car-btn" onclick="carRotate(1)" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+  </div>
+</section>
+
+<!-- ============================================================
+     EQUIPO
+============================================================ -->
+<section class="team" id="equipo">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Nuestros expertos</div>
+      <h2 class="section-title">El <em>Equipo</em></h2>
+      <p class="section-sub">Instructores apasionados y certificados, listos para guiarte en cada paso de tu transformacion.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="team-grid">
+      <!-- Aydee Fernandez -->
+      <div class="team-card aos">
+        <div class="team-img" style="background:linear-gradient(145deg,#4A3728,#8B6E4E);">
+          <span>👩‍🏫</span>
+          <span class="team-badge">Fundadora</span>
+        </div>
+        <div class="team-body">
+          <div class="team-name">Aydee Fernandez</div>
+          <div class="team-role">Directora & Instructora Principal</div>
+          <p class="team-bio">Instructora certificada en fitness y zumba con mas de 10 anos de experiencia. Fundadora de FITNESS CLUB FERNANDEZ y apasionada por transformar vidas a traves del movimiento.</p>
+          <div class="team-social">
+            <a href="https://www.facebook.com/aydee.fernandez.597439" target="_blank" class="tsoc" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/59168466609" target="_blank" class="tsoc" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wings Terceros -->
+      <div class="team-card aos d1">
+        <div class="team-img" style="background:linear-gradient(145deg,#1E5F58,#4AADA0);">
+          <span>🏋️</span>
+          <span class="team-badge">Coach</span>
+        </div>
+        <div class="team-body">
+          <div class="team-name">Wings Terceros</div>
+          <div class="team-role">Coach de Fitness & Entrenamiento</div>
+          <p class="team-bio">Especialista en entrenamiento funcional y desarrollo muscular. Metodologias basadas en ciencia del deporte con enfoque en resultados reales y sostenibles.</p>
+        </div>
+      </div>
+
+      <!-- Maria Fernandez -->
+      <div class="team-card aos d2">
+        <div class="team-img" style="background:linear-gradient(145deg,#6B4226,#C4956A);">
+          <span>💃</span>
+          <span class="team-badge">Instructora</span>
+        </div>
+        <div class="team-body">
+          <div class="team-name">Maria Fernandez</div>
+          <div class="team-role">Instructora de Danza & Zumba</div>
+          <p class="team-bio">Bailarina profesional formada en danza contemporanea, salsa y zumba. Crea clases energicas que combinan el arte del baile con el poder del fitness.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIOS
+============================================================ -->
+<section class="testimonios" id="testimonios">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Comunidad</div>
+      <h2 class="section-title">Lo que dicen <em>nuestros miembros</em></h2>
+      <p class="section-sub">Experiencias reales de personas que ya forman parte de FITNESS CLUB FERNANDEZ.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="test-grid" id="testGrid">
+      <div class="test-empty" id="testEmpty">
+        <i class="fas fa-comment-dots"></i>
+        Se el primero en compartir tu experiencia!
+      </div>
+    </div>
+
+    <div class="test-form-wrap aos">
+      <div class="test-form-title">Deja tu opinion</div>
+      <div class="test-form-sub">Compartenos tu experiencia. Tu comentario inspira a otros.</div>
+
+      <form id="testForm" onsubmit="submitTestimonio(event)">
+        <div class="fgroup">
+          <label class="flabel" for="tname">Tu nombre</label>
+          <input type="text" id="tname" class="finput" placeholder="Como te llamas?" required maxlength="50">
+        </div>
+        <div class="fgroup">
+          <label class="flabel">Calificacion</label>
+          <div class="star-selector" id="starSelector">
+            <label data-val="1" onclick="setStars(1)">&#9733;</label>
+            <label data-val="2" onclick="setStars(2)">&#9733;</label>
+            <label data-val="3" onclick="setStars(3)">&#9733;</label>
+            <label data-val="4" onclick="setStars(4)">&#9733;</label>
+            <label data-val="5" onclick="setStars(5)">&#9733;</label>
+          </div>
+          <div class="star-hint" id="starHint">Selecciona cuantas estrellas merece</div>
+        </div>
+        <div class="fgroup">
+          <label class="flabel" for="tcomment">Tu comentario</label>
+          <textarea id="tcomment" class="finput" rows="4"
+            placeholder="Cuentanos como ha sido tu experiencia con nosotros..."
+            required maxlength="300"
+            style="resize:vertical;min-height:110px;"></textarea>
+        </div>
+        <button type="submit" class="fsubmit" id="tsubmit">
+          <i class="fas fa-star"></i>
+          Publicar mi Opinion
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHATSAPP BANNER
+============================================================ -->
+<section class="wa-section">
+  <div class="wa-banner aos container">
+    <div class="wa-text">
+      <h3>Habla con nosotros</h3>
+      <p>Resolvemos tus dudas al instante. Escribenos y un instructor te respondera enseguida.</p>
+    </div>
+    <a href="https://wa.me/59168466609?text=Hola%2C%20quiero%20informacion%20sobre%20las%20clases" target="_blank" class="wa-btn">
+      <i class="fab fa-whatsapp"></i>
+      Chatear en WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- ============================================================
+     FORMULARIO DE CONTACTO
+============================================================ -->
+<section class="contact" id="contacto">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Comienza hoy</div>
+      <h2 class="section-title">Inscribete al <em>Club</em></h2>
+      <p class="section-sub">Completa el formulario y nos pondremos en contacto para darte la bienvenida a tu nueva familia fitness.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="form-wrap">
+      <form id="contactForm" onsubmit="handleForm(event)">
+        <div class="form-row">
+          <div class="fgroup aos">
+            <label class="flabel" for="fname">Nombre</label>
+            <input type="text" id="fname" class="finput" placeholder="Tu nombre" required>
+          </div>
+          <div class="fgroup aos d1">
+            <label class="flabel" for="lname">Apellido</label>
+            <input type="text" id="lname" class="finput" placeholder="Tu apellido" required>
+          </div>
+        </div>
+        <div class="fgroup aos">
+          <label class="flabel" for="email">Correo electronico</label>
+          <input type="email" id="email" class="finput" placeholder="tu@correo.com" required>
+        </div>
+        <div class="fgroup aos d1">
+          <label class="flabel" for="wanum">Numero de WhatsApp</label>
+          <input type="tel" id="wanum" class="finput" placeholder="+591 68466609" required>
+        </div>
+        <div class="fgroup aos d2">
+          <label class="flabel" for="service">Clase de interes</label>
+          <select id="service" class="fselect">
+            <option value="">Selecciona una opcion...</option>
+            <option value="fitness">Fitness & Gym</option>
+            <option value="danza">Clases de Danza</option>
+            <option value="zumba">Zumba</option>
+            <option value="bienestar">Club de Bienestar</option>
+            <option value="todos">Todos los servicios</option>
+          </select>
+        </div>
+        <div class="fgroup aos">
+          <button type="submit" class="fsubmit" id="fsubmit">
+            <i class="fas fa-paper-plane"></i>
+            Quiero Inscribirme
+          </button>
+        </div>
+        <div class="form-success" id="formSuccess">
+          <i class="fas fa-check-circle"></i>
+          <strong style="color:var(--mint-light);font-size:1.05rem;">Inscripcion recibida!</strong>
+          <p>Nos pondremos en contacto muy pronto. Bienvenido/a a FITNESS CLUB FERNANDEZ!</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer>
+  <div class="ft-grid">
+    <div>
+      <a href="#inicio" class="logo">
+        <div class="logo-icon"><i class="fas fa-dumbbell"></i></div>
+        <span class="logo-text">FITNESS <span>CLUB</span> FERNANDEZ</span>
+      </a>
+      <p class="ft-desc">Transformamos cuerpos y vidas a traves del fitness, la danza y el zumba. Una comunidad vibrante que te motiva cada dia.</p>
+      <div class="ft-social">
+        <a href="https://www.facebook.com/aydee.fernandez.597439" target="_blank" class="fsoc" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/59168466609" target="_blank" class="fsoc" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="fsoc" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="fsoc" title="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="ft-col">
+      <h4>Navegacion</h4>
+      <ul class="ft-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#contacto">Inscribete</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h4>Clases</h4>
+      <ul class="ft-links">
+        <li><a href="#servicios">Fitness & Gym</a></li>
+        <li><a href="#servicios">Danza</a></li>
+        <li><a href="#servicios">Zumba</a></li>
+        <li><a href="#servicios">Bienestar</a></li>
+        <li><a href="#contacto">Horarios</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="ft-bottom">
+    <p>&copy; 2025 FITNESS CLUB FERNANDEZ &mdash; Aydee Fernandez. Todos los derechos reservados.</p>
+    <p>Hecho con <span>&hearts;</span> para nuestra comunidad</p>
+  </div>
+</footer>
+
+<!-- Script principal -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
