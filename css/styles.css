@@ -99,7 +99,7 @@ a { text-decoration: none; color: inherit; }
   animation: heroKen 14s ease-in-out infinite alternate; z-index: 0;
 }
 @keyframes heroKen { from { transform: scale(1.04) translateX(0); } to { transform: scale(1.12) translateX(-1%); } }
-.hero-overlay { position: absolute; inset: 0; background: linear-gradient(115deg, rgba(8,8,8,0.75) 0%, rgba(8,8,8,0.45) 55%, rgba(74,173,160,0.05) 100%); z-index: 1; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(115deg, rgba(8,8,8,0.55) 0%, rgba(8,8,8,0.25) 55%, rgba(74,173,160,0.03) 100%); z-index: 1; }
 .hero-orb { position: absolute; right: -10%; top: 15%; width: 580px; height: 580px; border-radius: 50%; background: radial-gradient(circle, rgba(126,205,192,0.07) 0%, transparent 70%); z-index: 1; animation: orbPulse 6s ease-in-out infinite; }
 @keyframes orbPulse { 0%,100% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.06); opacity: 1; } }
 .hero-content { position: relative; z-index: 2; padding: 8rem 2rem 6rem; max-width: 1200px; margin: 0 auto; width: 100%; }
