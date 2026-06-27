@@ -118,7 +118,11 @@ document.querySelectorAll('#starSelector label').forEach((lbl, idx) => {
 });
 
 function saveTestimonios(list) {
-  localStorage.setItem('fcf_testimonios', JSON.stringify(list));
+  try {
+    localStorage.setItem('fcf_testimonios', JSON.stringify(list));
+  } catch(e) {
+    console.warn('No se pudo guardar en localStorage:', e);
+  }
 }
 function loadTestimonios() {
   try { return JSON.parse(localStorage.getItem('fcf_testimonios')) || []; }
@@ -177,21 +181,25 @@ function submitTestimonio(e) {
   btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Publicando...';
 
   setTimeout(() => {
-    const date = new Date().toLocaleDateString('es-ES', { day:'numeric', month:'long', year:'numeric' });
-    const list = loadTestimonios();
-    list.push({ name, comment, stars: selectedStars, date });
-    saveTestimonios(list);
-    renderTestimonios();
+    try {
+      const date = new Date().toLocaleDateString('es-ES', { day:'numeric', month:'long', year:'numeric' });
+      const list = loadTestimonios();
+      list.push({ name, comment, stars: selectedStars, date });
+      saveTestimonios(list);
+      renderTestimonios();
 
-    document.getElementById('testForm').reset();
-    selectedStars = 0;
-    document.querySelectorAll('#starSelector label').forEach(l => { l.classList.remove('selected'); l.style.color = ''; });
-    document.getElementById('starHint').textContent = 'Selecciona cuantas estrellas merece';
-    document.getElementById('starHint').style.color = '';
-
-    btn.disabled = false;
-    btn.innerHTML = '<i class="fas fa-star"></i> Publicar mi Opinion';
-    document.getElementById('testGrid').scrollIntoView({ behavior:'smooth', block:'nearest' });
+      document.getElementById('testForm').reset();
+      selectedStars = 0;
+      document.querySelectorAll('#starSelector label').forEach(l => { l.classList.remove('selected'); l.style.color = ''; });
+      document.getElementById('starHint').textContent = 'Selecciona cuantas estrellas merece';
+      document.getElementById('starHint').style.color = '';
+      document.getElementById('testGrid').scrollIntoView({ behavior:'smooth', block:'nearest' });
+    } catch(e) {
+      console.error('Error al publicar testimonio:', e);
+    } finally {
+      btn.disabled = false;
+      btn.innerHTML = '<i class="fas fa-star"></i> Publicar mi Opinion';
+    }
   }, 800);
 }
 
@@ -233,19 +241,18 @@ function handleForm(e) {
     `Clase de interes: ${servicio}`
   );
 
+  // Abrimos WhatsApp AQUÍ (gesto directo del usuario) para evitar popup blockers
+  window.open(`https://wa.me/59168466609?text=${mensaje}`, '_blank');
+
   btn.disabled = true;
   btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
 
   setTimeout(() => {
-    // Abrimos WhatsApp de Aydee con el mensaje pre-armado
-    window.open(`https://wa.me/59168466609?text=${mensaje}`, '_blank');
-
-    // Mostramos el mensaje de exito en pantalla
     succ.style.display = 'flex';
     document.getElementById('contactForm').reset();
     btn.disabled = false;
     btn.innerHTML = '<i class="fas fa-paper-plane"></i> Quiero Inscribirme';
 
     setTimeout(() => { succ.style.display = 'none'; }, 6000);
-  }, 1500);
+  }, 800);
 }
