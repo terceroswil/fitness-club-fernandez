@@ -3,6 +3,12 @@
 ============================================================ */
 
 /* ----------------------------------------------------------
+   GOOGLE SHEETS — reemplazar con tu URL de Apps Script
+   Ver instrucciones en: google-apps-script.gs
+---------------------------------------------------------- */
+const SHEETS_URL = 'TU_URL_AQUI';
+
+/* ----------------------------------------------------------
    NAVBAR: efecto blur al hacer scroll
 ---------------------------------------------------------- */
 const navbar = document.getElementById('navbar');
@@ -27,7 +33,7 @@ function closeSidebar() {
 /* ----------------------------------------------------------
    3D CAROUSEL
 ---------------------------------------------------------- */
-const TOTAL    = 3;
+const TOTAL    = 5;
 const STEP     = 360 / TOTAL;
 let curSlide   = 0;
 let curAngle   = 0;
@@ -67,7 +73,7 @@ function carGoTo(idx) {
   restartAuto();
 }
 
-function startAuto()   { autoTimer = setInterval(() => carRotate(1), 4000); }
+function startAuto()   { autoTimer = setInterval(() => carRotate(1), 7000); }
 function restartAuto() { clearInterval(autoTimer); startAuto(); }
 
 /* Touch swipe */
@@ -243,6 +249,12 @@ function handleForm(e) {
 
   // Abrimos WhatsApp AQUÍ (gesto directo del usuario) para evitar popup blockers
   window.open(`https://wa.me/59168466609?text=${mensaje}`, '_blank');
+
+  // Guardamos en Google Sheets (silencioso — no bloquea la UI si falla)
+  if (SHEETS_URL !== 'TU_URL_AQUI') {
+    const params = new URLSearchParams({ nombre, apellido, email, telefono, servicio });
+    fetch(`${SHEETS_URL}?${params}`, { method: 'GET', mode: 'no-cors' }).catch(() => {});
+  }
 
   btn.disabled = true;
   btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';

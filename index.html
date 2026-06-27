@@ -198,7 +198,7 @@
      CARRUSEL 3D
 ============================================================ -->
 <section class="carousel-section" id="galeria">
-  <div class="section-header" style="padding:0 2rem;">
+  <div class="section-header" style="padding:0 2rem; position:relative; z-index:2;">
     <div class="section-tag">Galeria</div>
     <h2 class="section-title">Nuestro <em>Mundo</em></h2>
     <p class="section-sub">Momentos reales de nuestra comunidad en accion.</p>
@@ -207,7 +207,7 @@
 
   <div class="scene" id="scene">
     <div class="ring" id="ring">
-      <!-- Slide 1 — Nuestro equipo -->
+      <!-- Slide 1 -->
       <div class="cslide active">
         <img src="assets/images/1.png" alt="Equipo FITNESS CLUB FERNANDEZ">
         <div class="cslide-cap">
@@ -215,20 +215,36 @@
           <div class="cslide-sub">Pasion por el fitness y la danza</div>
         </div>
       </div>
-      <!-- Slide 2 — Clases grupales -->
+      <!-- Slide 2 -->
       <div class="cslide">
-        <img src="assets/images/2.png" alt="Clases grupales FITNESS CLUB FERNANDEZ">
+        <img src="assets/images/11.jpeg" alt="FITNESS CLUB FERNANDEZ">
         <div class="cslide-cap">
           <div class="cslide-title">Clases Grupales</div>
           <div class="cslide-sub">Juntos somos mas fuertes</div>
         </div>
       </div>
-      <!-- Slide 3 — Danza y estilo -->
+      <!-- Slide 3 -->
       <div class="cslide">
-        <img src="assets/images/3.png" alt="Danza FITNESS CLUB FERNANDEZ">
+        <img src="assets/images/22.jpeg" alt="FITNESS CLUB FERNANDEZ">
         <div class="cslide-cap">
           <div class="cslide-title">Danza & Estilo</div>
           <div class="cslide-sub">Ritmo, energia y actitud</div>
+        </div>
+      </div>
+      <!-- Slide 4 -->
+      <div class="cslide">
+        <img src="assets/images/3.jpg" alt="FITNESS CLUB FERNANDEZ">
+        <div class="cslide-cap">
+          <div class="cslide-title">Entrenamiento</div>
+          <div class="cslide-sub">Resultados reales, esfuerzo real</div>
+        </div>
+      </div>
+      <!-- Slide 5 -->
+      <div class="cslide">
+        <img src="assets/images/33.jpeg" alt="FITNESS CLUB FERNANDEZ">
+        <div class="cslide-cap">
+          <div class="cslide-title">Nuestra Comunidad</div>
+          <div class="cslide-sub">Una familia que te impulsa cada dia</div>
         </div>
       </div>
     </div>
@@ -240,6 +256,8 @@
       <div class="car-dot active" onclick="carGoTo(0)"></div>
       <div class="car-dot" onclick="carGoTo(1)"></div>
       <div class="car-dot" onclick="carGoTo(2)"></div>
+      <div class="car-dot" onclick="carGoTo(3)"></div>
+      <div class="car-dot" onclick="carGoTo(4)"></div>
     </div>
     <button class="car-btn" onclick="carRotate(1)" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
   </div>
